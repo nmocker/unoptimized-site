@@ -1,0 +1,253 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Your Name Here
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Reset
+1. Main Layout
+2. Content
+
+==============================================
+*/
+/* 0. Reset ================================= */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* 1. Main Layout ================================= */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #ccc;
+	font-family: Helvetica, Arial, sans-serif;
+	background: #3a3733;
+	color: #fffcf7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 2.8rem;
+}
+
+h2 {
+	font-size: 2.4rem;
+}
+
+p {
+	line-height: 1.4rem;
+}
+
+a {
+	color: #fffcf7;
+}
+
+header {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	height: 200px;
+	padding: 20px;
+	color: #3a3733;
+	background-image: url(../img/header-background.jpg);
+	background-position: center center;
+	background-size: cover;
+}
+
+@media only screen and (min-width: 640px) {
+	header {
+		height: 400px;
+	}
+}
+
+article {
+	width: 100%;
+	max-width: 960px;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+footer {
+	padding: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* 2. Content ================================= */
+.gallery-title {
+	padding: 5px;
+}
+
+@media only screen and (min-width: 640px) {
+	.gallery-title {
+		padding: 20px 40px;
+	}
+}
+
+.gallery-title h3 {
+	font-weight: 100;
+	opacity: 0.4;
+}
+
+.gallery-description {
+	padding: 5px 5px 15px 5px;
+}
+
+@media only screen and (min-width: 640px) {
+	.gallery-description {
+		padding: 5px 40px 20px 40px;
+	}
+}
+
+.gallery-image-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.gallery-image-grid figure {
+	position: relative;
+	flex-basis: 100%;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+@media only screen and (min-width: 640px) {
+	.gallery-image-grid figure {
+		flex-basis: 50%;
+	}
+	.gallery-image-grid figure:nth-child(2n - 1) {
+		flex-basis: calc(50% - 5px);
+		margin-right: 5px;
+	}
+}
+
+.gallery-image-grid figure img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: 0.3s;
+}
+
+.gallery-image-grid figure figcaption {
+	position: absolute;
+	width: 100%;
+	padding: 20px;
+	bottom: 0;
+	color: white;
+	background: rgba(0, 0, 0, 0.6);
+	transition: 0.3s;
+	transform: translateY(100%);
+}
+
+.gallery-image-grid figure:hover figcaption {
+	transform: translateY(0);
+}
+
+.gallery-image-grid figure:hover img {
+	transform: scale(1.2);
+}
+
+.comments {
+	margin-top: 15px;
+}
+
+.comments h4 {
+	padding: 5px 0px;
+}
+
+.media, .comment, .social {
+	display: flex;
+	align-items: center;
+}
+
+.media .media-figure, .comment .media-figure, .social .media-figure {
+	margin-right: 1em;
+}
+
+.media .media-content, .comment .media-content, .social .media-content {
+	flex: 1;
+}
+
+.comment {
+	background: rgba(255, 255, 255, 0.1);
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+.comment img {
+	width: 60px;
+	height: 60px;
+	border-radius: 60px;
+}
+
+.social {
+	margin-left: 15px;
+}
+
+.social img {
+	height: 25px;
+	margin-right: 3px;
+}
+
+/*# sourceMappingURL=main.css.map */
